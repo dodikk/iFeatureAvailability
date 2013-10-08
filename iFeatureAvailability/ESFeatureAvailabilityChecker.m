@@ -22,4 +22,10 @@
     return [ self isOsNewerThan: SUBSCRIPTING_MIN_IOS_VERSION ];
 }
 
++(BOOL)isPathBuilderAvailable
+{
+    static NSString* const SUBSCRIPTING_MIN_IOS_VERSION = @"7.0";
+    return [ self isOsNewerThan: SUBSCRIPTING_MIN_IOS_VERSION ];
+}
+
 @end

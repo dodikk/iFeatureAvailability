@@ -4,5 +4,6 @@
 
 +(BOOL)isSocialFrameworkAvailable;
 +(BOOL)isSubscriptingAvailable;
++(BOOL)isPathBuilderAvailable;
 
 @end
