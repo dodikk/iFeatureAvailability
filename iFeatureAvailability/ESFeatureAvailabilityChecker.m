@@ -10,22 +10,41 @@
     return ( comp != NSOrderedAscending );
 }
 
-+(BOOL)isSocialFrameworkAvailable
++(BOOL)isAvailableSinceIOS6
 {
     static NSString* const SOCIAL_FRAMEWORK_MIN_IOS_VERSION = @"6.0";
     return [ self isOsNewerThan: SOCIAL_FRAMEWORK_MIN_IOS_VERSION ];
 }
 
++(BOOL)isAvailableSinceIOS7
+{
+    static NSString* const SOCIAL_FRAMEWORK_MIN_IOS_VERSION = @"7.0";
+    return [ self isOsNewerThan: SOCIAL_FRAMEWORK_MIN_IOS_VERSION ];
+}
+
++(BOOL)isSocialFrameworkAvailable
+{
+    return [ self isAvailableSinceIOS6 ];
+}
+
 +(BOOL)isSubscriptingAvailable
 {
-    static NSString* const SUBSCRIPTING_MIN_IOS_VERSION = @"6.0";
-    return [ self isOsNewerThan: SUBSCRIPTING_MIN_IOS_VERSION ];
+    return [ self isAvailableSinceIOS6 ];
 }
 
 +(BOOL)isPathBuilderAvailable
 {
-    static NSString* const SUBSCRIPTING_MIN_IOS_VERSION = @"7.0";
-    return [ self isOsNewerThan: SUBSCRIPTING_MIN_IOS_VERSION ];
+    return [ self isAvailableSinceIOS7 ];
+}
+
++(BOOL)isMapCameraAvailable
+{
+    return [ self isAvailableSinceIOS7 ];
+}
+
++(BOOL)isPolyLineMapOverlayRendererAvailable
+{
+    return [ self isAvailableSinceIOS7 ];
 }
 
 @end

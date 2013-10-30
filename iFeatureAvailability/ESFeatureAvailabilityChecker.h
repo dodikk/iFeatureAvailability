@@ -4,6 +4,9 @@
 
 +(BOOL)isSocialFrameworkAvailable;
 +(BOOL)isSubscriptingAvailable;
+
 +(BOOL)isPathBuilderAvailable;
++(BOOL)isMapCameraAvailable;
++(BOOL)isPolyLineMapOverlayRendererAvailable;
 
 @end
